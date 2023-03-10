@@ -14,7 +14,7 @@ cwd = "/"
 
 
 
-def terminal(command,cwd):
+def terminal(command,cwd,container):
 
     """
     Execute a command inside a Docker container with the given working directory.
@@ -43,7 +43,7 @@ while True:
     if input_str == 'q':
         break
     
-    response,new_cwd = terminal(input_str,cwd)
+    response,new_cwd = terminal(input_str,cwd,container)
     cwd = new_cwd
     print(response)
 
